@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1>Profile Creation</h1>
+        </div>
+        <form>
+            <div class="form-group">
+                <legend for="inputName">Name</legend>
+                <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+                    </div>
+                  </div>
+            </div>
+            <div class="form-group">
+                <legend for="inputAge">Birthday</legend>
+                <input type="date" class="form-control" id="inputAge">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <legend for="inputCity">City</legend>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                  <legend for="inputState">State</legend>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>TODO: Add States Here</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <legend for="inputZip">Zip</legend>
+                  <input type="number" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                  <legend for="inputEmail">Email</legend>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+                <div class="form-group col-md-4">
+                  <legend for="inputPassword">Password</legend>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+                <div class="form-group col-md-4">
+                    <legend for="inputConfirmPassword">Confirm Password</legend>
+                    <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <legend for="inputBio">Bio</legend>
+                    <textarea class="form-control" id="inputBio" rows="3"></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <legend for="inputSkierAbility">Skier Ability</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityBeginner" value="beginner">
+                        <label class="form-check-label" for="abilityBeginner">
+                          Beginner
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityIntermediate" value="intermediate">
+                        <label class="form-check-label" for="abilityIntermediate">
+                          Intermediate
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityExperienced" value="experienced">
+                        <label class="form-check-label" for="abilityExperienced">
+                          Experienced
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group col-md-2">
+                    <legend for="inputDriverRiderStatus">Driver or Rider?</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusDriver" value="driver">
+                        <label class="form-check-label" for="statusDriver">
+                          Driver
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusRider" value="rider">
+                        <label class="form-check-label" for="statusRider">
+                          Rider
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusBoth" value="both">
+                        <label class="form-check-label" for="statusBoth">
+                          Both
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <legend for="inputProfilePicture">Upload a Profile Picture</legend>
+                <input type="file" class="form-control-file" id="inputProfilePicture" accept="image/png, image/jpeg">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+</html>
