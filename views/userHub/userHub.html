@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: 24vw;
+      object-fit: cover;
+    }
+    .list-group{
+      max-height: 300px;
+      margin-bottom: 10px;
+      overflow:scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+  </head>
+  <body>
+      <p style="text-align:center; margin-top: 10px; margin-bottom: 20px;"><img src="3.gif" class="centerImage" alt="logo"></p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 24rem; margin-left: 50px;">
+            <img class="card-img-top" src="gang.jpg" alt="Card image cap">
+            <div class="card-header">
+              <h2 style="text-align: center;">User's name here</h2>
+            </div>
+            <div class="card-body">
+              <a class="btn btn-primary" href="" role="button">Edit profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-right: 100px;">
+          <div class="panel-heading"><h3 class="panel-title">Followed threads</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h3> Thread #1 title and link </h3>
+              </li>
+              <li class="list-group-item">
+                <h3> Thread #2 title and link </h3>
+              </li>
+              <li class="list-group-item">
+                <h3> Thread #3 title and link </h3>
+              </li>
+              <li class="list-group-item">
+                <h3> Thread #4 title and link </h3>
+              </li>
+              <li class="list-group-item">
+                <h3> Thread #5 title and link </h3>
+              </li>
+              <li class="list-group-item">
+                <h3> Thread #6 title and link </h3>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-secondary" style="margin-top:10px;" href="#" role="button">Direct Messages</a>
+          <div class="card-group" style="margin-top:10px;">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center;">User1</h5>
+                <p class="card-text">You: Message you sent.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center;">User2</h5>
+                <p class="card-text">User2: Message you recieved.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center;">User3</h5>
+                <p class="card-text">User3: Message you recieved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 24rem; margin-left: 50px;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align:center;">Ratings</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-top: 10px;">
+          <h3>Search discussion threads</h3>
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="searchBar" placeholder="Enter Area Here">
+              <button class="btn btn-secondary" style="margin-left: 5px;">Search</button>
+            </div>
+          </form>
+        </div>
+    </div>
+
+  </body>
+</html>
