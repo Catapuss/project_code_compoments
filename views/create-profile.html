@@ -3,112 +3,163 @@
     <head>
         <meta charset="uft-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://kit.fontawesome.com/2dcaf1913f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../src/styles/app.css" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     </head>
     <body>
-        <div class="page-header">
-            <h1>Profile Creation</h1>
+        <div class="top container">
+            <h2><i class="fas fa-user-plus"></i> Create Profile</h2>
+              <hr>
         </div>
-        <form>
-            <div class="form-group">
-                <legend for="inputName">Name</legend>
-                <div class="row">
-                    <div class="col">
-                      <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+        <div class="with-scroll container">
+              <!-- left column -->
+              <div class="left col-md-3">
+                <div class="text-center">
+                  <img src="../src/resources/img/placeholder-100x100.png" class="rounded-circle" height="200px" alt="Profile Picture">
+                  
+                    <label class="btn btn-primary btn-file" style="margin-top: 10px;">
+                        Upload a different photo... <input type="file" style="display: none;">
+                    </label>
+
+                </div>
+              </div>
+              
+              <!-- edit form column -->
+              <div class="middle col-md-9 personal-info">
+                <div class="alert alert-info alert-dismissable">
+                  <a class="panel-close close" data-dismiss="alert">×</a> 
+                  <i class="fas fa-coffee"></i>
+                  This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                </div>
+                <h3><i class="fas fa-user-cog"></i> Personal info</h3>
+                <form class="form-horizontal" role="form" action="edit-profile.html">
+                    <div class="form-group">
+                        <label  class="col-lg-3 control-label" for="inputBio">Bio</label>
+                        <div class="col-lg-8">
+                            <textarea class="form-control" id="inputBio" rows="5"></textarea>
+                        </div>
                     </div>
-                    <div class="col">
-                      <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">First name:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" value="Jane">
+                        </div>
                     </div>
-                  </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Last name:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" value="Bishop">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="inputAge">Birthday</label>
+                        <div class="col-lg-8">
+                            <input type="date" class="form-control" id="inputAge">
+                        </div>
+                    </div>
+                <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="inputCity">City</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-lg-5">
+                            <label class="col-lg-3 control-label" for="inputState">State</label>
+                            <div class="col-lg-12">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>TODO: Add States Here</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label class="col-lg-3 control-label" for="inputZip">Zip</label>
+                            <div class="col-lg-12">
+                                <input type="number" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                    </div>
+                <h3><i class="fas fa-unlock-alt"></i> Account</h3>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Email:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" value="janesemail@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Password:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="password" value="11111122333">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Confirm password:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="password" value="11111122333">
+                        </div>
+                    </div>
+                <h3><i class="fas fa-cog"></i> Preferences</h3>
+                    <div class="form-row">
+                        <div class="form-group col-lg-4">
+                            <label class="col-md-10 control-label" for="inputSkierAbility">Skier Ability</label>
+                            <div class="col-md-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityBeginner" value="beginner">
+                                    <label class="form-check-label" for="abilityBeginner">
+                                      Beginner
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityIntermediate" value="intermediate">
+                                    <label class="form-check-label" for="abilityIntermediate">
+                                      Intermediate
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityExperienced" value="experienced">
+                                    <label class="form-check-label" for="abilityExperienced">
+                                      Experienced
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label class="col-md-10 control-label" for="inputDriverRiderStatus">Driver or Rider?</label>
+                            <div class="col-md-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusDriver" value="driver">
+                                    <label class="form-check-label" for="statusDriver">
+                                      Driver
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusRider" value="rider">
+                                    <label class="form-check-label" for="statusRider">
+                                      Rider
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusBoth" value="both">
+                                    <label class="form-check-label" for="statusBoth">
+                                      Both
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-8">
+                            <input type="submit" class="btn btn-primary" value="Create Profile">
+                            <span></span>
+                            <input type="reset" class="btn btn-default" value="Cancel" onclick="window.history.back()">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <legend for="inputAge">Birthday</legend>
-                <input type="date" class="form-control" id="inputAge">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                  <legend for="inputCity">City</legend>
-                  <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="form-group col-md-4">
-                  <legend for="inputState">State</legend>
-                  <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>TODO: Add States Here</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                  <legend for="inputZip">Zip</legend>
-                  <input type="number" class="form-control" id="inputZip">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                  <legend for="inputEmail">Email</legend>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-                <div class="form-group col-md-4">
-                  <legend for="inputPassword">Password</legend>
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
-                <div class="form-group col-md-4">
-                    <legend for="inputConfirmPassword">Confirm Password</legend>
-                    <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-8">
-                    <legend for="inputBio">Bio</legend>
-                    <textarea class="form-control" id="inputBio" rows="3"></textarea>
-                </div>
-                <div class="form-group col-md-2">
-                    <legend for="inputSkierAbility">Skier Ability</legend>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityBeginner" value="beginner">
-                        <label class="form-check-label" for="abilityBeginner">
-                          Beginner
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityIntermediate" value="intermediate">
-                        <label class="form-check-label" for="abilityIntermediate">
-                          Intermediate
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inputSkierAbility" id="abilityExperienced" value="experienced">
-                        <label class="form-check-label" for="abilityExperienced">
-                          Experienced
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group col-md-2">
-                    <legend for="inputDriverRiderStatus">Driver or Rider?</legend>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusDriver" value="driver">
-                        <label class="form-check-label" for="statusDriver">
-                          Driver
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusRider" value="rider">
-                        <label class="form-check-label" for="statusRider">
-                          Rider
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inputDriverRiderStatus" id="statusBoth" value="both">
-                        <label class="form-check-label" for="statusBoth">
-                          Both
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <legend for="inputProfilePicture">Upload a Profile Picture</legend>
-                <input type="file" class="form-control-file" id="inputProfilePicture" accept="image/png, image/jpeg">
-            </div>
-            <button type="submit" class="btn btn-primary">Create Profile</button>
-        </form>
+        </div>
     </body>
 </html>
