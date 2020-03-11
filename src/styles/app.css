@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #FAFAFA !important;
+}
+
+html, 
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    height: 60px;
+}
+
+.disabled-button
+{
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.with-scroll {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -60px;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 60px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+
+.container
+{
+    background-color: white;
+}
+
+.left,
+.middle,
+.right {
+    overflow: scroll;
+    height: auto;
+    padding: .5rem;
+}
+
+.left::-webkit-scrollbar,
+.middle::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+    display: none;
+}
