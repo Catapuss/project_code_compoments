@@ -1,0 +1,62 @@
+
+/* This css was created by Bootstrap for their login page example */
+html, body{
+    height:100%; /* important to vertically align the container */
+    margin:0;
+    padding:0;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  margin: auto;
+}
+.star{
+  color: goldenrod;
+  font-size: 2.0rem;
+  padding: 0 1rem; /* space out the stars */
+}
+.star::before{
+  content: '\2606';    /* star outline */
+  cursor: pointer;
+}
+.star.rated::before{
+  /* the style for a selected star */
+  content: '\2605';  /* filled star */
+}
+
+.stars{
+  counter-reset: rateme 0;
+  font-size: 2.0rem;
+  font-weight: 900;
+}
+.star.rated{
+  counter-increment: rateme 1;
+}
+.stars::after{
+  content: counter(rateme) '/5';
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float:center;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rating Page</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Bootstrap core CSS -->
+	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="resources/rating_system.css" rel="stylesheet">
+  </head>
+  <body class="center text-center">
+    <form class="form-signin">
+  	  <img class="rounded-circle" src="resources/img/gang.jpg" alt="" width="72" height="72">
+  	  <h1 class="h3 mb-3 font-weight-normal">User Name Displayed Here</h1>
+      <div class="stars" data-rating="3">
+             <span class="star">&nbsp;</span>
+             <span class="star">&nbsp;</span>
+             <span class="star">&nbsp;</span>
+             <span class="star">&nbsp;</span>
+             <span class="star">&nbsp;</span>
+      </div>
+      <br>
+      <div class="card-group text-center">
+        <div class="row">
+        <div class ="column">
+        <div class="btn border-dark btn-light" >
+          <div class="card-body id="interest1" text-center" >
+            <p class="card-text">Safe Driver</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="btn border-dark btn-light">
+          <div class="card-body id="interest2" text-center">
+            <p class="card-text">Good Music</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="btn border-dark btn-light">
+          <div class="card-body id="interest3" text-center">
+            <p class="card-text">Good Conversation</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="column">
+        <div class="btn border-dark btn-light" >
+          <div class="card-body id="interest1" text-center" >
+            <p class="card-text">Rude</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="btn border-dark btn-light">
+          <div class="card-body id="interest2" text-center">
+            <p class="card-text"> Talks Alot</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="btn border-dark btn-light">
+          <div class="card-body id="interest3" text-center">
+            <p class="card-text">Reckless Driving</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br>
+  	  <button class="btn btn-lg btn-primary" type="submit">Submit</button>
+    </form>
+    <script>
+    //initial setup
+
+    document.addEventListener('DOMContentLoaded', function(){
+        let stars = document.querySelectorAll('.star');
+        stars.forEach(function(star){
+            star.addEventListener('click', setRating);
+        });
+
+        let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
+        let target = stars[rating - 1];
+        target.dispatchEvent(new MouseEvent('click'));
+    });
+
+    function setRating(ev){
+        let span = ev.currentTarget;
+        let stars = document.querySelectorAll('.star');
+        let match = false;
+        let num = 0;
+        stars.forEach(function(star, index){
+            if(match){
+                star.classList.remove('rated');
+            }else{
+                star.classList.add('rated');
+            }
+            //are we currently looking at the span that was clicked
+            if(star === span){
+                match = true;
+                num = index + 1;
+            }
+        });
+        document.querySelector('.stars').setAttribute('data-rating', num);
+    }
+    </script>
+  </body>
+</html>
