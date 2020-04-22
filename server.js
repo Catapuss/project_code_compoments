@@ -27,7 +27,7 @@ const dbConfig = {
 	port: 5432,
 	database: 'user_db',
 	user: 'postgres',
-	password: 'duncan4788'
+	password: 'pwd'
 };
 
 var db = pgp(dbConfig);
